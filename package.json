@@ -24,7 +24,7 @@
   "repository": "mozilla/webcompat-blipz-experiment",
   "scripts": {
     "build": "web-ext build",
-    "firefox": "web-ext run",
+    "firefox": "web-ext run --pref=extensions.webcompat-blipz-experiment.variation=''",
     "lint": "npm-run-all lint:*",
     "lint:addon": "web-ext lint",
     "lint:css": "stylelint docs/*.css webextension/**/*.css",

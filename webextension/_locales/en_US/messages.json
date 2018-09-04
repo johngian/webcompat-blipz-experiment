@@ -21,16 +21,9 @@
   "buttonOK": {
     "message": "OK"
   },
-  "buttonNo": {
-    "message": "No"
-  },
   "buttonSubmit": {
     "message": "Submit"
   },
-  "buttonYes": {
-    "message": "Yes"
-  },
-
   "detailLabel_appVersion": {
     "message": "Version:"
   },
@@ -92,18 +85,20 @@
   "placeholderDescription": {
     "message": "Description"
   },
-
-  "titleInitialPromptBasic": {
+  "titleInitialPromptIntroduction": {
+    "message": "Help us give you a better web experience."
+  },
+  "textInitialPromptIntroduction": {
     "message": "Are you satisfied with how this website works in Firefox?"
   },
-  "textInitialPromptBasic": {
-    "message": "Help us make the web better for everyone."
+  "promptWorks": {
+    "message": "Yay! Everything works fine"
   },
-  "titleInitialPromptFriendly": {
-    "message": "Firefox wants to know: are you satisfied with the way this website is working?"
+  "promptBroken": {
+    "message": "Nope, there are problems"
   },
-  "textInitialPromptFriendly": {
-    "message": "Help us to better detect issues with the web."
+  "privacyPolicy": {
+    "message": "Sending feedback will submit this domain to Mozilla. Your data will be handled in accordance with Mozilla's privacy policy."
   },
   "linkInitialPrompt": {
     "message": "Why am I seeing this?"

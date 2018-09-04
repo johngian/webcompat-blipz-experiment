@@ -46,14 +46,13 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.addEventListener("click", handleClick);
 
   for (const [selector, msg] of Object.entries({
-    "#initialPrompt > h1.no-context": "titleInitialPromptBasic",
-    "#initialPrompt > p.no-context": "textInitialPromptBasic",
-    "#initialPrompt > h1.little-context": "titleInitialPromptFriendly",
-    "#initialPrompt > p.little-context": "textInitialPromptFriendly",
-    "#initialPrompt > h1.more-context": "titleInitialPromptFriendly",
-    "#initialPrompt > p.more-context": "textInitialPromptFriendly",
+    "#initialPrompt > h1.introduction": "titleInitialPromptIntroduction",
+    "#initialPrompt > p.introduction": "textInitialPromptIntroduction",
     "#initialPrompt > a": "linkInitialPrompt",
     "#initialPrompt > label": "labelNeverShowAgain",
+    "#initialPrompt > button.siteWorks": "promptWorks",
+    "#initialPrompt > button.siteBroken": "promptBroken",
+    "#initialPrompt > p.privacyPolicy": "privacyPolicy",
     "#thankYou > h1": "titleThankYou",
     "#thankYouFeedback > h1": "titleThankYouFeedback",
     "#thankYouFeedback > p": "textThankYouFeedback",
@@ -73,8 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
     "[data-detail='buildID'] > th": "detailLabel_buildID",
     "[data-detail='uiVariant'] > th": "detailLabel_experimentBranch",
     "button[data-action='ok']": "buttonOK",
-    "button[data-action='yes']": "buttonYes",
-    "button[data-action='no']": "buttonNo",
     "button[data-action='submit']": "buttonSubmit",
     "button[data-action='cancel']": "buttonCancel",
   })) {

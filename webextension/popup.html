@@ -30,53 +30,5 @@
       <a data-exit="learnMore" href="https://webcompat.mozilla.community/thanks"></a>
       <button data-action="ok"></button>
     </section>
-    <section id="feedbackForm">
-      <h2>
-        <button data-action="back"></button>
-      </h2>
-      <p></p>
-      <form>
-        <select name="type" required>
-          <option value="" hidden></option>
-          <option value="desktopNotMobile"></option>
-          <option value="siteUnusable"></option>
-          <option value="brokenDesign"></option>
-          <option value="playbackFailure"></option>
-          <option value="other"></option>
-        </select>
-        <button class="takeScreenshot"></button>
-        <div class="screenshot">
-          <p></p>
-          <img data-exit="screenshot" src="screenshot.jpg" alt="" />
-          <button></button>
-        </div>
-        <textarea name="description" rows="1"></textarea>
-      </form>
-      <a href="#" role="button" data-action="showFeedbackDetails"></a>
-      <button data-action="cancel"></button>
-      <button data-action="submit" class="emphasize"></button>
-    </section>
-    <section id="feedbackDetails">
-      <h2>
-        <button data-action="back"></button>
-      </h2>
-      <table>
-        <tr data-detail="url"><th></th><td></td></tr>
-        <tr data-detail="type"><th></th><td></td></tr>
-        <tr data-detail="description"><th></th><td></td></tr>
-        <tr data-detail="channel"><th></th><td></td></tr>
-        <tr data-detail="appVersion"><th></th><td></td></tr>
-        <tr data-detail="platform"><th></th><td></td></tr>
-        <tr data-detail="buildID"><th></th><td></td></tr>
-        <tr data-detail="uiVariant"><th></th><td></td></tr>
-      </table>
-      <div class="screenshot">
-        <p></p>
-        <img data-exit="screenshot" src="screenshot.jpg" alt="" />
-      </div>
-      <p></p>
-      <button data-action="cancel"></button>
-      <button data-action="submit" class="emphasize"></button>
-    </section>
   </body>
 </html>

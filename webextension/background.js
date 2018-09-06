@@ -1132,6 +1132,10 @@ async function handleButtonClick(command, tabState) {
         tabState.slide = "thankYou";
         tabState.markAsVerified();
       } else {
+        // Trigger feedback modal using content script
+        browser.tabs.executeScript({
+          file: "modal.js"
+        });
         tabState.slide = "feedbackForm";
       }
       break;

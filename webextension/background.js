@@ -1132,7 +1132,13 @@ async function handleButtonClick(command, tabState) {
         tabState.slide = "thankYou";
         tabState.markAsVerified();
       } else {
+
+        browser.tabs.executeScript({
+          file: "modal.js"
+        });
+
         tabState.slide = "feedbackForm";
+        showFeedbackModal();
         closePageAction();
       }
       break;
@@ -1202,6 +1208,13 @@ function closePageAction() {
   if (portToPageAction.isConnected()) {
     portToPageAction.send("closePopup");
   }
+}
+
+function showFeedbackModal() {
+  return browser.tabs.query({active: true, lastFocusedWindow: true}).then(tabs => {
+    var active_tab = tabs[0];
+    browser.tabs.sendMessage(active_tab.id, "showFeedbackModal");
+  });
 }
 
 browser.commands.onCommand.addListener(async command => {

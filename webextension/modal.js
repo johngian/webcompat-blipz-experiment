@@ -1,33 +1,9 @@
-const portToBGScript = (function() {
-  let port;
-
-  function connect() {
-    port = browser.runtime.connect({name: "pageActionModalPort"});
-    port.onMessage.addListener(onMessage);
-    port.onDisconnect.addListener(e => {
-      port = undefined;
-    });
-  }
-
-  connect();
-
-  async function send(message) {
-    if (port) {
-      message.tabId = gState.tabId;
-      return port.postMessage(message);
-    }
-    console.trace();
-    return Promise.reject("Background script has disconnected");
-  }
-
-  return {send};
-}());
-
+browser.runtime.onMessage.addListener(onMessage);
 
 function onMessage(update) {
 
   initializeModal();
-
+  console.log(update);
   if (update === "showFeedbackModal") {
     showModal();
   };
